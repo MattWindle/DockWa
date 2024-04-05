@@ -4,31 +4,6 @@
   <style>
     {% scope_css %}
 
-      {# Image #}
-
-      {% if module.styles.image.corner.radius >= 0 %}
-        .card__image {
-          border-radius: {{ module.styles.image.corner.radius ~ "px" }};
-        }
-      {% endif %}
-
-      {# Card #}
-
-      .card {
-        {% if module.styles.card.background.background_type == "color" and module.styles.card.background.color.color %}
-          background-color: rgba({{ module.styles.card.background.color.color|convert_rgb }}, {{ module.styles.card.background.color.opacity / 100 }});
-        {% elif module.styles.card.background.background_type == "gradient" %}
-          background: {{ module.styles.card.background.gradient.css }};
-        {% elif module.styles.card.background.background_type == "image" %}
-          {{ module.styles.card.background.image.css }}
-        {% endif %}
-        {{ module.styles.card.border.border.css }}
-        {% if module.styles.card.corner.radius >= 0 %}
-          border-radius: {{ module.styles.card.corner.radius ~ "px" }};
-        {% endif %}
-        {{ module.styles.card.spacing.spacing.css }}
-      }
-
     {% end_scope_css %}
   </style>
 {% end_require_css %}
@@ -39,24 +14,36 @@
 
   {# Loops through each card in the cards repeater #}
 
-  {% for card in module.card %}
-    <section class="cards__card card">
-      {% if card.image.src %}
-        {% set sizeAttrs = 'width="{{ card.image.width|escape_attr }}" height="{{ card.image.height|escape_attr }}"' %}
-        {% if card.image.size_type == "auto" %}
-          {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
-        {% elif card.image.size_type == "auto_custom_max" %}
-          {% set sizeAttrs = 'width="{{ card.image.max_width|escape_attr }}" height="{{ card.image.max_height|escape_attr }}" style="max-width: 100%; max-height: auto;"' %}
-        {% endif %}
-        {% set loadingAttr = card.image.loading != "disabled" ? 'loading="{{ card.image.loading }}"' : "" %}
-        <img class="card__image" src="{{ card.image.src|escape_url }}" alt="{{ card.image.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>{# loadingAttr, sizeAttrs escaped above #}
-      {% endif %}
-      {% if card.text %}
-        <div class="card__text">
-          {{ card.text|sanitize_html }}
+    {% for card in module.card %}
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1587365001066-8263b7061a38?q=70&w=400" alt="">
+        <div>
+          <p>{{ card.marina_type }}</p>
+          <h3>{{ card.title }}</h3>
+          <div class="card_desc">
+            <p>{{ card.location }}</p>
+            <div class="stars_wrapper flex">
+              {% for i in range(5) %}
+                {% if i < card.rating %}
+                <svg height="15px" width="15px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                   viewBox="0 0 53.867 53.867" xml:space="preserve">
+                <polygon style="fill:#EFCE4A;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798 
+                  10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 "/>
+                </svg>
+                {% else %}
+                <svg height="15px" width="15px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                     viewBox="0 0 53.867 53.867" xml:space="preserve">
+                  <polygon style="fill:#BCBCBC;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798 
+                                                         10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 "/>
+                </svg>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
         </div>
-      {% endif %}
-    </section>
-  {% endfor %}
+      </div>
+    {% endfor %}
 
+
+  
 </div>
