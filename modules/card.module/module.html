@@ -10,40 +10,47 @@
 
 {# Cards #}
 
-<div class="cards">
+<div class="cards-wrapper">
+  <div class="cards-wrapper__header flex items-center justify-between">
+    <h2>Lorem ipsum dolor sit met</h2>
+    <a href="#" >Search more</a>
+  </div>
+  <div class="cards">
+    {# Loops through each card in the cards repeater #}
 
-  {# Loops through each card in the cards repeater #}
-
-    {% for card in module.card %}
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1587365001066-8263b7061a38?q=70&w=400" alt="">
-        <div>
-          <p>{{ card.marina_type }}</p>
-          <h3>{{ card.title }}</h3>
-          <div class="card_desc">
-            <p>{{ card.location }}</p>
-            <div class="stars_wrapper flex">
-              {% for i in range(5) %}
-                {% if i < card.rating %}
-                <svg height="15px" width="15px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                   viewBox="0 0 53.867 53.867" xml:space="preserve">
-                <polygon style="fill:#EFCE4A;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798 
-                  10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 "/>
-                </svg>
-                {% else %}
-                <svg height="15px" width="15px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                     viewBox="0 0 53.867 53.867" xml:space="preserve">
-                  <polygon style="fill:#BCBCBC;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798 
-                                                         10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 "/>
-                </svg>
-                {% endif %}
-              {% endfor %}
+      {% for card in module.card %}
+        <div class="card">
+          <img src="{{ card.image.src|escape_url }}" alt="{{ card.image.alt|escape_attr }}" >
+          <div class="card__body">
+            <p class="card__type">{{ card.content.marina_type }}</p>
+            <h3>{{ card.content.title }}</h3>
+            <div class="card__desc flex items-center ">
+              <p>{{ card.content.location }}</p>
+              <div class="stars_wrapper flex">
+                {% for i in range(5) %}
+                  {% if i < card.content.rating %}
+                  <svg height="15px" width="15px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                    viewBox="0 0 53.867 53.867" xml:space="preserve">
+                  <polygon style="fill:#EFCE4A;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798 
+                    10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 "/>
+                  </svg>
+                  {% else %}
+                  <svg height="15px" width="15px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                      viewBox="0 0 53.867 53.867" xml:space="preserve">
+                    <polygon style="fill:#BCBCBC;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798 
+                                                          10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 "/>
+                  </svg>
+                  {% endif %}
+                {% endfor %}
+              </div>
             </div>
           </div>
+            <a href="{{ card.button.url }}" class="button">{{ card.button.text }}</a>
         </div>
-      </div>
-    {% endfor %}
-
-
-  
+      {% endfor %}
+  </div>
 </div>
+
+
+
+

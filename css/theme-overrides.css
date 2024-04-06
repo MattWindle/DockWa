@@ -264,7 +264,7 @@ blockquote {
 {############################   4. Buttons   ###############################}
 {###########################################################################}
 
-button,
+/* button,
 .button,
 .hs-button,
 .hs-blog-post-listing__post-button {
@@ -299,7 +299,7 @@ button:active,
   {{ button_font.style }};
   background-color: rgba({{ color_variant(theme.buttons.background.color.color, 40)|convert_rgb }}, {{ theme.buttons.background.color.opacity / 100 }});
   border-color: {{ color_variant(theme.buttons.border.border.top.color, 40) }};
-}
+} */
 
 {###########################################################################}
 {##############################   5. Forms   ###############################}

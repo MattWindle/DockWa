@@ -1,9 +1,30 @@
-.cards{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+.cards-wrapper .cards-wrapper__header{
+  margin-bottom: 42px;
+}
+.cards-wrapper .cards-wrapper__header a{
+  color: 
 }
 
-.card h3{
+.cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+.card :where(h3,p){
   margin-bottom: 0px;
+}
+.card__body{
+  margin-bottom: 36px;
+}
+.card img{
+  margin-bottom: 24px;
+  width: 100%;
+}
+.card .card__desc{
+  gap: 60px;
+  flex-wrap: wrap
+}
+.card .card__type{
+  color: #6ACCE0;
+  margin-bottom: 8px;
 }

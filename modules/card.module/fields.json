@@ -12,95 +12,217 @@
     "default" : 3
   },
   "children" : [ {
-    "id" : "b48578a0-44c0-4949-3e82-8c896c18f922",
-    "name" : "title",
+    "id" : "be303652-28f0-9602-cf04-e092bc00a068",
+    "name" : "image",
     "display_width" : null,
-    "label" : "Title",
-    "required" : true,
-    "locked" : false,
-    "validation_regex" : "",
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "default" : "California Yacht Marina - Port Royal Marina"
-  }, {
-    "id" : "546bb8e0-dded-fbb4-6d51-181a1d4ab757",
-    "name" : "location",
-    "display_width" : null,
-    "label" : "Location",
+    "label" : "Image",
     "required" : false,
     "locked" : false,
-    "validation_regex" : "",
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "default" : "San Pedro, CA"
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://144398372.fs1.hubspotusercontent-eu1.net/hubfs/144398372/port-royal-marina.jpg",
+      "alt" : "port-royal-marina",
+      "loading" : "lazy",
+      "width" : 395,
+      "height" : 221,
+      "max_width" : 395,
+      "max_height" : 221
+    }
   }, {
-    "id" : "ed97b6a1-2586-5908-8708-5e2591ab8021",
-    "name" : "marina_type",
+    "id" : "06c94432-780b-a504-132b-4788ec7d9ce0",
+    "name" : "content",
     "display_width" : null,
-    "label" : "Marina Type",
+    "label" : "Content",
     "required" : false,
     "locked" : false,
-    "display" : "select",
-    "choices" : [ [ "Dock", "Dock" ], [ "Mooring", "Mooring" ] ],
-    "multiple" : false,
-    "reordering_enabled" : true,
-    "preset" : null,
-    "type" : "choice",
-    "default" : "Dock"
+    "children" : [ {
+      "id" : "b48578a0-44c0-4949-3e82-8c896c18f922",
+      "name" : "title",
+      "display_width" : null,
+      "label" : "Title",
+      "required" : true,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "California Yacht Marina - Port Royal Marina "
+    }, {
+      "id" : "546bb8e0-dded-fbb4-6d51-181a1d4ab757",
+      "name" : "location",
+      "display_width" : null,
+      "label" : "Location",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "San Pedro, CA"
+    }, {
+      "id" : "ed97b6a1-2586-5908-8708-5e2591ab8021",
+      "name" : "marina_type",
+      "display_width" : null,
+      "label" : "Marina Type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "Dock", "Dock" ], [ "Mooring", "Mooring" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "Dock"
+    }, {
+      "id" : "7ffb10de-52fd-f421-e806-7c88409c06af",
+      "name" : "rating",
+      "display_width" : null,
+      "label" : "Rating",
+      "required" : false,
+      "locked" : false,
+      "display" : "text",
+      "min" : 1,
+      "max" : 5,
+      "step" : 1,
+      "type" : "number",
+      "default" : 3
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "title" : "California Yacht Marina - Port Royal Marina ",
+      "location" : "San Pedro, CA",
+      "marina_type" : "Dock",
+      "rating" : 3
+    }
   }, {
-    "id" : "7ffb10de-52fd-f421-e806-7c88409c06af",
-    "name" : "rating",
+    "id" : "32e619e4-ca77-e7da-955f-a8f3a476b800",
+    "name" : "button",
     "display_width" : null,
-    "label" : "Rating",
+    "label" : "Button",
     "required" : false,
     "locked" : false,
-    "display" : "text",
-    "min" : 1,
-    "max" : 5,
-    "step" : 1,
-    "type" : "number",
-    "default" : 3
+    "children" : [ {
+      "id" : "a5e427eb-6d36-076c-08e5-214450a43a73",
+      "name" : "url",
+      "display_width" : null,
+      "label" : "URL",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER" ],
+      "type" : "url",
+      "default" : {
+        "content_id" : null,
+        "href" : "",
+        "type" : "EXTERNAL"
+      }
+    }, {
+      "id" : "a9a885ff-e219-dc9e-0dbb-f60405cd9f64",
+      "name" : "text",
+      "display_width" : null,
+      "label" : "Text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Read more"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "",
+        "type" : "EXTERNAL"
+      },
+      "text" : "Read more"
+    }
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "type" : "group",
   "default" : [ {
-    "title" : "California Yacht Marina - Port Royal Marina",
-    "location" : "San Pedro, CA",
-    "rating" : 3,
-    "marina_type" : "Dock"
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://144398372.fs1.hubspotusercontent-eu1.net/hubfs/144398372/port-royal-marina.jpg",
+      "alt" : "port-royal-marina",
+      "loading" : "lazy",
+      "width" : 395,
+      "height" : 221,
+      "max_width" : 395,
+      "max_height" : 221
+    },
+    "content" : {
+      "title" : "California Yacht Marina - Port Royal Marina ",
+      "location" : "San Pedro, CA",
+      "marina_type" : "Dock",
+      "rating" : 3
+    },
+    "button" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "",
+        "type" : "EXTERNAL"
+      },
+      "text" : "Read more"
+    }
   }, {
-    "title" : "California Yacht Marina - Port Royal Marina",
-    "location" : "San Pedro, CA",
-    "rating" : 3,
-    "marina_type" : "Dock"
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://144398372.fs1.hubspotusercontent-eu1.net/hubfs/144398372/port-royal-marina.jpg",
+      "alt" : "port-royal-marina",
+      "loading" : "lazy",
+      "width" : 395,
+      "height" : 221,
+      "max_width" : 395,
+      "max_height" : 221
+    },
+    "content" : {
+      "title" : "California Yacht Marina - Port Royal Marina ",
+      "location" : "San Pedro, CA",
+      "marina_type" : "Dock",
+      "rating" : 3
+    },
+    "button" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "",
+        "type" : "EXTERNAL"
+      },
+      "text" : "Read more"
+    }
   }, {
-    "title" : "California Yacht Marina - Port Royal Marina",
-    "location" : "San Pedro, CA",
-    "rating" : 3,
-    "marina_type" : "Dock"
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://144398372.fs1.hubspotusercontent-eu1.net/hubfs/144398372/port-royal-marina.jpg",
+      "alt" : "port-royal-marina",
+      "loading" : "lazy",
+      "width" : 395,
+      "height" : 221,
+      "max_width" : 395,
+      "max_height" : 221
+    },
+    "content" : {
+      "title" : "California Yacht Marina - Port Royal Marina ",
+      "location" : "San Pedro, CA",
+      "marina_type" : "Dock",
+      "rating" : 3
+    },
+    "button" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "",
+        "type" : "EXTERNAL"
+      },
+      "text" : "Read more"
+    }
   } ]
-}, {
-  "id" : "be303652-28f0-9602-cf04-e092bc00a068",
-  "name" : "image",
-  "display_width" : null,
-  "label" : "Image",
-  "required" : false,
-  "locked" : false,
-  "responsive" : true,
-  "resizable" : true,
-  "show_loading" : false,
-  "type" : "image",
-  "default" : {
-    "size_type" : "auto",
-    "src" : "https://144398372.fs1.hubspotusercontent-eu1.net/hubfs/144398372/port-royal-marina.jpg",
-    "alt" : "port-royal-marina",
-    "loading" : "lazy",
-    "width" : 395,
-    "height" : 221,
-    "max_width" : 395,
-    "max_height" : 221
-  }
 } ]
