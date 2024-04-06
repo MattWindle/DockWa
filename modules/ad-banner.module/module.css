@@ -1,0 +1,32 @@
+.banner-wrapper{
+  position: relative;
+  background-color: #0E1225;
+  padding: 50px 25px;
+  color: #FFFFFF;
+}
+.banner-wrapper h3{
+  color: #FFFFFF;
+}
+
+.banner-wrapper img {
+  display: block;
+  margin-bottom: 64px;
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .banner-wrapper{
+    padding: 50px 60px;
+    padding-right: 50%;
+  }
+  .banner-wrapper img {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-13%, -50%);
+    width: 100%;
+    max-width: 260px;
+    height: 350px;
+  }
+}

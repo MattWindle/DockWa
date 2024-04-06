@@ -9,7 +9,7 @@
 .button{
   background-color: {{ button_bg_color }};
   color: {{ button_text_color }};
-  padding: 1rem 1.5rem;
+  padding: 0.875rem 2rem;
   border-radius: 5px;
   font-size: 1rem;
   display: inline-block;
