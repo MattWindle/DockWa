@@ -1,0 +1,13 @@
+<div class="trusted_logos_wrapper">
+  <h2>
+    {{ module.title }}
+  </h2>
+  <div class="trusted-logos">
+    {% for item in module.logo %}
+      <img src="{{ item.src|escape_url }}" alt="{{ item.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }} >
+    {% endfor %}    
+  </div>
+</div>
+
+
+

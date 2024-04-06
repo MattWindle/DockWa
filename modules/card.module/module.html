@@ -17,7 +17,6 @@
   </div>
   <div class="cards">
     {# Loops through each card in the cards repeater #}
-
       {% for card in module.card %}
         <div class="card">
           <img src="{{ card.image.src|escape_url }}" alt="{{ card.image.alt|escape_attr }}" >
@@ -50,6 +49,7 @@
       {% endfor %}
   </div>
 </div>
+
 
 
 
