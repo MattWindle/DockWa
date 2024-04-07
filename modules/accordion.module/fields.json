@@ -1,0 +1,69 @@
+[ {
+  "id" : "bd2ccef2-00ab-b980-adaa-048d9166cb1d",
+  "name" : "section_title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "placeholder" : "Boaters FAQ",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Boaters FAQ"
+}, {
+  "id" : "cdeebcd8-7398-7dd0-a931-2d6ba94966df",
+  "name" : "accordion",
+  "display_width" : null,
+  "label" : "Accordion",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : null,
+    "sorting_label_field" : "70ae4ac1-1001-dea8-ea55-5f4cfededbc4",
+    "default" : 5
+  },
+  "children" : [ {
+    "id" : "70ae4ac1-1001-dea8-ea55-5f4cfededbc4",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Question",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Question",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Question"
+  }, {
+    "id" : "91c27124-e901-81ea-b775-6f56aa67a0bf",
+    "name" : "text",
+    "display_width" : null,
+    "label" : "Answer",
+    "required" : true,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<span>Neque egestas congue quisque egestas diam in. Platea dictumst vestibulum rhoncus est pellentesque elit.</span>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "title" : "Question",
+    "text" : "<span>Neque egestas congue quisque egestas diam in. Platea dictumst vestibulum rhoncus est pellentesque elit.</span>"
+  }, {
+    "title" : "Question",
+    "text" : "<span>Neque egestas congue quisque egestas diam in. Platea dictumst vestibulum rhoncus est pellentesque elit.</span>"
+  }, {
+    "title" : "Question",
+    "text" : "<span>Neque egestas congue quisque egestas diam in. Platea dictumst vestibulum rhoncus est pellentesque elit.</span>"
+  }, {
+    "title" : "Question",
+    "text" : "<span>Neque egestas congue quisque egestas diam in. Platea dictumst vestibulum rhoncus est pellentesque elit.</span>"
+  }, {
+    "title" : "Question",
+    "text" : "<span>Neque egestas congue quisque egestas diam in. Platea dictumst vestibulum rhoncus est pellentesque elit.</span>"
+  } ]
+} ]
