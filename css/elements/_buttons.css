@@ -6,7 +6,7 @@
 {% set button_background_hover = color(theme.buttons.hover.background.color) %}
 
 
-.button{
+.button, input[type="submit"]  {
   background-color: {{ button_bg_color }};
   color: {{ button_text_color }};
   padding: 0.875rem 2rem;
@@ -15,7 +15,7 @@
   display: inline-block;
   text-decoration: none;
 }
-.button:hover{
+.button:hover, input[type="submit"]:hover{
   background-color: {{ button_background_hover }};
   color: {{ button_color_hover }}
 }

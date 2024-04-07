@@ -10,7 +10,7 @@
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
 }
-.card :where(h3,p){
+.card :where(h4,p){
   margin-bottom: 0px;
 }
 .card__body{
