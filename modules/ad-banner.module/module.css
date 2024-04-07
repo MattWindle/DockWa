@@ -10,14 +10,19 @@
 
 .banner-wrapper img.banner-wrapper__mobile-image {
   display: block;
-  margin-bottom: 64px;
+  margin: 0 auto 64px auto;
   width: 100%;
+  max-width: 240px;
   height: auto;
+  padding: 15px;
 }
 .banner-wrapper img.banner-wrapper__desktop-image {
   display: none;
 }
-
+.banner-wrapper .button{
+  width: 100%;
+  text-align: center;
+}
 @media screen and (min-width: 575px) {
   .banner-wrapper{
     padding: 25px 30px;
@@ -25,7 +30,6 @@
     gap: 20px;
   }
   .banner-wrapper p{
-    /* width: 40%; */
     margin-bottom: 40px;
   }
   .banner-wrapper img.banner-wrapper__mobile-image {
@@ -33,10 +37,12 @@
   }
   .banner-wrapper img.banner-wrapper__desktop-image {
     display: block;
-    width: 100%;
     max-width: 260px;
     height: 350px;
     margin-bottom: 0px;
+  }
+  .banner-wrapper .button{
+    width: auto;
   }
 }
 
@@ -46,7 +52,6 @@
   }
   .banner-wrapper p{
     width: 60%;
-    margin-bottom: 40px;
     padding-right: 20px;
   }
   .banner-wrapper img.banner-wrapper__desktop-image {
@@ -54,8 +59,5 @@
     top: 50%;
     right: 0;
     transform: translate(-13%, -50%);
-    width: 100%;
-    max-width: 260px;
-    height: 350px;
   }
 }
