@@ -1,0 +1,71 @@
+[ {
+  "id" : "cf90a4a4-c362-14b2-55ed-dfa228d30302",
+  "name" : "tab",
+  "display_width" : null,
+  "label" : "Tab",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 6,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "2254085e-bd9f-93b9-3c6e-8be3ff047cee",
+    "name" : "tab_title",
+    "display_width" : null,
+    "label" : "Tab Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Attract boaters",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Attract boaters"
+  }, {
+    "id" : "e2e2297f-c4d4-4dd2-02fe-80a4aa02b3cb",
+    "name" : "tab_content",
+    "display_width" : null,
+    "label" : "Tab Content",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<span style=\"font-size: 16px;\">Capture reservations and inquiries 24/7 with your online form. Collect qualifying information like length, draft, and dates. Confirm, deny, or add to waitlists.</span>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "tab_title" : "Attract boaters",
+    "tab_content" : "<span style=\"font-size: 16px;\">Capture reservations and inquiries 24/7 with your online form. Collect qualifying information like length, draft, and dates. Confirm, deny, or add to waitlists.</span>"
+  }, {
+    "tab_title" : "Attract boaters",
+    "tab_content" : "<span style=\"font-size: 16px;\">Capture reservations and inquiries 24/7 with your online form. Collect qualifying information like length, draft, and dates. Confirm, deny, or add to waitlists.</span>"
+  }, {
+    "tab_title" : "Attract boaters",
+    "tab_content" : "<span style=\"font-size: 16px;\">Capture reservations and inquiries 24/7 with your online form. Collect qualifying information like length, draft, and dates. Confirm, deny, or add to waitlists.</span>"
+  } ]
+}, {
+  "id" : "c864672d-25a9-4326-41d1-90993d1b5b05",
+  "name" : "image",
+  "display_width" : null,
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://144398372.fs1.hubspotusercontent-eu1.net/hubfs/144398372/mobile.png",
+    "alt" : "mobile",
+    "loading" : "lazy",
+    "width" : 256,
+    "height" : 477,
+    "max_width" : 256,
+    "max_height" : 477
+  }
+} ]

@@ -1,0 +1,32 @@
+<div class="software_tabs_wrapper">
+  <h2>Software that does everything but catch the lines</h2>
+  <div>
+    <div class="dropdown-menu">
+      <div class="dropdown-menu__header">
+        <span>Attract boaters</span>
+        <svg stroke-width="0" viewBox="0 0 512 512" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M128 192l128 128 128-128z"></path></svg>
+      </div>
+      <ul>
+        {% for singleTab in module.tab %}
+        <li>{{ singleTab.tab_title }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    {% for singleTab in module.tab %}
+    <div class="tabs_wrapper">
+      <div class="tab-title">
+        <p>{{ singleTab.tab_title }}</p>
+      </div>
+      <div class="tab-content" data-tab={{ loop.index }} >
+        <p class="tab-content__title">{{ singleTab.tab_title }}</p>
+        {{ singleTab.tab_content }}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <img src={{ module.image.src }} alt={{ module.image.alt }} />
+
+  <div class="dynamic-tabs-content"></div>
+</div>

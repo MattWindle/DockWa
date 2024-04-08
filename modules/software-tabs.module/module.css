@@ -1,0 +1,113 @@
+.software_tabs_wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1070px;
+  margin: 0 auto;
+}
+.software_tabs_wrapper h2 {
+  grid-column: -1 / 1;
+  text-align: center;
+}
+.tabs_wrapper {
+  display: none;
+  max-width: 300px;
+}
+.tab-content {
+  display: none;
+}
+.tab-title {
+  padding-top: 20px;
+  border-bottom: 1px #0e1225 solid;
+  width: 100%;
+  cursor: pointer;
+}
+.tab-title.active p {
+  font-weight: bold;
+}
+.tab-title p {
+  transition: all 200ms ease;
+}
+.tab-title:hover p {
+  transform: translateX(10px);
+}
+
+.tab-content__title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.software_tabs_wrapper img {
+  order: 3;
+  display: block;
+  margin: 0 auto;
+}
+.dynamic-tabs-content {
+  text-align: center;
+  /*   width: 100%;
+  max-width: 340px;
+  display: block;
+  margin: 0 auto; */
+}
+
+/* Dropdown Menu */
+
+.dropdown-menu {
+  max-width: 350px;
+  margin: 0 auto;
+}
+.dropdown-menu__header {
+  padding: 16px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.dropdown-menu ul {
+  display: none;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  border-top: 2px solid #0e1225;
+
+}
+.dropdown-menu ul.open{
+  display: block;
+}
+.dropdown-menu ul li {
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  border-bottom: 1px solid #EEE;
+}
+.dropdown-menu ul li:hover {
+  background-color: #eee;
+}
+@media screen and (min-width: 800px) {
+  .dropdown-menu{
+    display: none;
+  }
+  .software_tabs_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 260px 1fr;
+    gap: 50px;
+    justify-content: center;
+  }
+  .software_tabs_wrapper img {
+    order: initial;
+  }
+  .dynamic-tabs-content {
+    text-align: left;
+  }
+  .tabs_wrapper {
+    display: flex;
+    gap: 20px;
+    max-width: 300px;
+  }
+}
