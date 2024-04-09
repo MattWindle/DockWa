@@ -472,6 +472,10 @@ tfoot td {
 .menu__link, .menu__child-toggle{
   color: white;
 }
+.menu__item.menu__item--depth-2 .menu__link{
+  color: #f0f5f8;
+  font-size: 14px;
+}
 .menu__link:hover{
   color: #f0f5f8;
 }

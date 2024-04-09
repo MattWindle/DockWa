@@ -15,8 +15,12 @@
   width: 100%;
   transition: all 0.3s ease;
 }
-
-@media (max-width: 767px) {
+@media screen and (min-width: 500px) {
+  .menu--mobile {
+    width: 60%;
+}
+}
+@media (max-width: 769px) {
   .menu.menu--desktop {
     display: none;
   }
@@ -50,13 +54,13 @@
   text-decoration: none;
 }
 
-@media (min-width: 768px) and (max-width: 1150px) {
+@media (min-width: 769px) and (max-width: 1150px) {
   .menu__link {
     font-size: 0.833rem;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 769px) {
   .menu__item {
     display: block;
     width: 100%;
@@ -73,10 +77,9 @@
 .menu__item--depth-1 {
   display: inline-block;
   padding: 0.7rem 0.875rem;
-  text-transform: uppercase;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 769px) {
   .menu__item--depth-1 {
     padding: 0;
   }
@@ -148,7 +151,7 @@
 
 /* Creates the triangle at the top of the submenu drop down */
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .menu__submenu--level-2 > .menu__item:first-child:before {
     content: "";
     display: block;
@@ -181,7 +184,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 769px) {
   .menu__submenu {
     border: none;
     border-radius: 0;
@@ -225,7 +228,7 @@
 }
 /* Menu icons */
 
-@media(min-width: 768px) {
+@media(min-width: 769px) {
   .menu__submenu .menu__child-toggle {
     margin-left: auto;
     padding: 0 1.05rem;
@@ -257,7 +260,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 769px) {
   .menu__child-toggle {
     background-position: center right 30px;
     background-repeat: no-repeat;

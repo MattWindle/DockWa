@@ -7,6 +7,11 @@
     background-color: #0E1225;
     padding: 24px 0 16px 0;
   }
+  header .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
   header #hs_cos_wrapper_site_logo{
     margin-right: 20px;
   }
@@ -15,36 +20,63 @@
   }
   .header__menu-icon{
     cursor: pointer;
+    justify-self: end;
   }
-  @media screen and (min-width: 767px) {
+  .header__navigation{
+    order: 3;
+    grid-row: 2 / 3;
+    grid-column: -1 / 1;
+    justify-self: center;
+    padding-top: 10px;
+  }
+
+  @media screen and (min-width: 769px) {
     .header__actions{
       display: flex;
       align-items: center;
       gap: 1rem;
+      justify-self: end;
     }
     .header__menu-icon{
       display: none;
     }
+
+  }
+  @media screen and (min-width: 955px) {
+    .header__navigation{
+      order:  initial;
+      grid-row: initial;
+      grid-column: initial;
+      justify-self: initial;
+      padding-top: 0;
+      margin-left: 70px;  
+    }
+    header .container{
+      display: grid;
+      grid-template-columns: 175px 1fr 255px;
+      align-items: center;
+    }
+    .menu.menu--desktop .menu__item.menu__item--depth-2:hover{
+      background-color: #eeeeee;
+    }
   }
 </style>
 <header>
-
-  <div class="container flex items-center justify-between">
-    <div class="flex items-center">
+  <div class="container">
+    <div class="">
       {% module "site_logo"
       path="@hubspot/logo"
       img={
         "loading": "eager"
       }
     %}
-     <div class="header__navigation header--element">
-      {% module "navigation-primary"
-        path="../../modules/menu",
-        label="Primary navigation"
-      %}
     </div>
-    </div>
-
+  <div class="header__navigation header--element">
+    {% module "navigation-primary"
+      path="../../modules/menu",
+      label="Primary navigation"
+    %}
+  </div>
   <div class="header__actions">
     <a class="button" href="">Sign Up</a>
     <a class="button button_nobg" href="">Log in</a>
