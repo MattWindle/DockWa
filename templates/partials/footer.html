@@ -7,6 +7,13 @@
   .footer{
     padding: 34px 0;
   }
+  footer .container{
+    flex-direction: column;
+    gap: 20px;
+  }
+  footer .hs-menu-wrapper.hs-menu-flow-horizontal ul{
+    flex-direction: row;
+  }
   .footer ul[role="menu"] li:not(:last-child):after {
     content: '|';
     display: inline-block;
@@ -16,6 +23,9 @@
     font-size: 16px;
     color: #6ACCE0;
     text-decoration: none;
+  }
+  p.copyright{
+    margin-bottom: 0;
   }
 </style>
 
@@ -27,5 +37,10 @@
     label="footer-navigation",
   %}
   </div>
+  <p class="copyright">&copy; Copyright <span id="currentYear"></span></p>
 </div>
 </footer>
+
+<script>
+document.getElementById("currentYear").textContent = new Date().getFullYear();
+</script>

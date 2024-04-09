@@ -15,9 +15,10 @@
   display: inline-block;
   text-decoration: none;
 }
-.button:hover, input[type="submit"]:hover{
+.button:hover, input[type="submit"]:hover, input[type="submit"]:focus{
   background-color: {{ button_background_hover }};
-  color: {{ button_color_hover }}
+  color: {{ button_color_hover }};
+  text-decoration: none;
 }
 .button.button_nobg{
   background-color: transparent;

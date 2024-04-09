@@ -5,10 +5,22 @@
 .trusted-logos{
   display: flex;
   gap: 28px;
-  justify-content: center;
-  flex-wrap: wrap;
+
+  flex-direction: column;
 }
 .trusted-logos img{
   height: 93px;
   width: auto;
+  align-self: center;
+}
+
+@media screen and (min-width: 468px) {
+  .trusted-logos{
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .trusted-logos img{
+    align-self: initial;
+  }
 }

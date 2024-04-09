@@ -11,7 +11,7 @@
 {# Cards #}
 
 <div class="cards-wrapper">
-  <div class="cards-wrapper__header flex items-center justify-between">
+  <div class="cards-wrapper__header">
     <h2>Lorem ipsum dolor sit met</h2>
     <a href="#" >Search more</a>
   </div>
@@ -23,7 +23,7 @@
           <div class="card__body">
             <p class="card__type">{{ card.content.marina_type }}</p>
             <h4>{{ card.content.title }}</h4>
-            <div class="card__desc flex items-center ">
+            <div class="card__desc ">
               <p>{{ card.content.location }}</p>
               <div class="stars_wrapper flex">
                 {% for i in range(5) %}
