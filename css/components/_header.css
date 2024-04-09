@@ -363,7 +363,6 @@
 /* Mobile toggles */
 
 @media (max-width: 767px) {
-  .header__navigation,
   .header__search,
   .header__language-switcher {
     display: none;

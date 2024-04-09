@@ -9,6 +9,9 @@
 .accordion-wrapper .accordion{
   border-bottom: 1px solid #ccc;
 }
+.accordion__title svg{
+  flex-shrink: 0;
+}
 .accordion-wrapper .accordion.expanded .accordion__plus-icon, 
 .accordion-wrapper .accordion .accordion__minus-icon{
   display: none;

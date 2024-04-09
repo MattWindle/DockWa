@@ -70,3 +70,10 @@ if (childToggle) {
 
   });
 }
+
+document.querySelector(".header__menu-icon").addEventListener("click", () => {
+  document.querySelector(".menu--mobile").classList.toggle("open");
+})
+document.querySelector(".menu--mobile__close-icon").addEventListener("click", () => {
+  document.querySelector(".menu--mobile").classList.remove("open");
+})
